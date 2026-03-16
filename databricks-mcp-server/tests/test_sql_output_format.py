@@ -73,6 +73,4 @@ class TestFormatResultsMarkdown:
         md = _format_results_markdown(rows)
         js = json.dumps(rows)
         # Markdown should be at least 30% smaller
-        assert len(md) < len(js) * 0.7, (
-            f"Markdown ({len(md)} chars) should be <70% of JSON ({len(js)} chars)"
-        )
+        assert len(md) < len(js) * 0.7, f"Markdown ({len(md)} chars) should be <70% of JSON ({len(js)} chars)"
